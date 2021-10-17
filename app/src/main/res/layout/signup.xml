@@ -3,8 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <ImageButton
-        android:id="@+id/register_back"
+        android:id="@+id/register_back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/backbutton"
@@ -14,7 +21,7 @@
         android:id="@+id/register_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/register_back"
+        android:layout_below="@id/register_back_button"
         android:fontFamily="@font/sf_ui_bold"
         android:gravity="center"
         android:text="@string/register"
@@ -148,11 +155,46 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <View
-        style="@style/Divider"
-        android:layout_below="@+id/register_cardviewsec"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/register_cardviewsec"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="148dp" />
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="111dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_cardviewsec"
+            android:fontFamily="@font/sf_ui_light"
+            android:text="@string/register_alreadysignin"
+            android:textColor="@color/dark_grey" />
+
+        <Button
+            android:id="@+id/register_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/register_signin"
+            android:textColor="@color/dark_orange" />
+    </LinearLayout>
+    </LinearLayout>
+    <!--    <View-->
+<!--        android:id="@+id/view"-->
+<!--        style="@style/Divider"-->
+<!--        android:layout_below="@id/register_cardviewsec"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginTop="113dp"-->
+<!--        android:layout_marginBottom="39dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    </ScrollView>
 
 </RelativeLayout>

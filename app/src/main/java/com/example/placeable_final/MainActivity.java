@@ -29,6 +29,7 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
     Button signin,register;
+    ImageButton back;
     Animation scaleup,scaledown;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +40,25 @@ public class MainActivity extends AppCompatActivity {
         scaleup= AnimationUtils.loadAnimation(MainActivity.this,R.anim.scale_up);
         scaledown = AnimationUtils.loadAnimation(MainActivity.this,R.anim.scale_down);
         register = findViewById(R.id.notregister);
+        back=findViewById(R.id.signin_back);
+
+        //back button ontouch
+        back.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent motionEvent) {
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    back.startAnimation(scaleup);
+                    finish();
+                }
+                else if(motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    back.startAnimation(scaledown);
+                }
+
+                return true;
+            }
+        });
+
+        //signin fun on touch
         signin.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent motionEvent) {
@@ -55,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //register fun on touch
         register.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent motionEvent) {
