@@ -32,7 +32,6 @@ public class studentProfile extends Fragment {
 //        Button btn2=view.findViewById(R.id.profile_academics_details1);
 //        Button btn3=view.findViewById(R.id.profile_academics_details2);
         View basicDetails=(Button) view.findViewById(R.id.Basic_details);
-        View back_btn=(ImageButton) view.findViewById(R.id.action_bar_back);
         expandableView=view.findViewById(R.id.expandabletext);
         cardView=view.findViewById(R.id.profile_cardview);
         expandable_academics=view.findViewById(R.id.expandabletext_academics);
@@ -52,32 +51,6 @@ public class studentProfile extends Fragment {
 
             }
         });
-
-     back_btn.setOnTouchListener(new View.OnTouchListener() {
-         @Override
-         public boolean onTouch(View v, MotionEvent event) {
-             return false;
-         }
-     });
-
-//        academicsdetails.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(expandable_academics.getVisibility()==View.GONE){
-//                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
-//                    expandable_academics.setVisibility(View.VISIBLE);
-//                    expandableView.setVisibility(View.GONE);
-//                }
-//                else{
-//                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
-//                    expandable_academics.setVisibility(View.GONE);
-//                }
-//
-//            }
-//        });
-
         return view;
-
-
     }
 }

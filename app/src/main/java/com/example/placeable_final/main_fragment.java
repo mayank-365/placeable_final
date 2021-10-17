@@ -43,14 +43,13 @@ public class main_fragment extends Fragment {
                     studentProfile student = new studentProfile();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment1,new studentProfile());
+                    fragmentTransaction.replace(R.id.fragment1,new studentProfile(),"STUDENT_PROFILE");
+                    fragmentTransaction.addToBackStack("STUDENT_PROFILE");
                     fragmentTransaction.commit();
-
                 }
                 else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
                     viewprofile.startAnimation(scaledown);
                 }
-
                 return true;
             }
         });

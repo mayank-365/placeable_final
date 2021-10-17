@@ -6,6 +6,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -60,8 +61,31 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment1,new main_fragment());
+        fragmentTransaction.replace(R.id.fragment1,new main_fragment(),"MAIN_FRAGMENT");
         fragmentTransaction.commit();
-    }
 
-}
+        View back_btn=(ImageButton) view.findViewById(R.id.action_bar_back);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment f=getActiveFragment();
+                if(f instanceof studentProfile)  {
+                    main_fragment mainFrag = new main_fragment();
+                    FragmentManager fragmentManager1 = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment1, mainFrag);
+                    fragmentTransaction.commit();
+                }
+
+            }
+        });
+    }
+    public Fragment getActiveFragment() {
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            return null;
+        }
+        String tag = getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount() - 1).getName();
+        return (Fragment) getSupportFragmentManager().findFragmentByTag(tag);
+    }
+  }
+
