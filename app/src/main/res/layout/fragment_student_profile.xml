@@ -11,6 +11,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardViewProfileStatus"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="30dp"
+                android:outlineAmbientShadowColor="@color/black"
+                >
             <LinearLayout
                 android:id="@+id/profile_summary"
                 android:layout_width="match_parent"
@@ -68,6 +77,17 @@
                         android:textSize="18dp" />
                 </LinearLayout>
             </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardViewProfileStatus"
+                android:id="@+id/cardViewBasicDetails"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="30dp"
+                android:outlineAmbientShadowColor="@color/black"
+                >
             <LinearLayout
                 android:id="@+id/profile_basicdetails"
                 android:layout_width="match_parent"
@@ -111,6 +131,17 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardViewAcademicDetails"
+                android:layout_below="@+id/cardViewBasicDetails"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="30dp"
+                android:outlineAmbientShadowColor="@color/black"
+                >
             <LinearLayout
                 android:id="@+id/lineaar_profilie_academics"
                 android:layout_width="match_parent"
@@ -157,6 +188,17 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardViewIntern"
+                android:layout_below="@+id/cardViewAcademicDetails"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="30dp"
+                android:outlineAmbientShadowColor="@color/black"
+                >
             <LinearLayout
                 android:id="@+id/lineaar_internship_details"
                 android:layout_width="match_parent"
@@ -202,6 +244,17 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardViewLorem"
+                android:layout_below="@+id/cardViewIntern"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="30dp"
+                android:outlineAmbientShadowColor="@color/black"
+                >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -245,7 +298,11 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-            </LinearLayout></RelativeLayout></ScrollView>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
