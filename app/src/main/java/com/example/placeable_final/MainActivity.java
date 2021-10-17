@@ -28,7 +28,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
-    Button signin;
+    Button signin,register;
     Animation scaleup,scaledown;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         signin=findViewById(R.id.button_signin);
         scaleup= AnimationUtils.loadAnimation(MainActivity.this,R.anim.scale_up);
         scaledown = AnimationUtils.loadAnimation(MainActivity.this,R.anim.scale_down);
-
+        register = findViewById(R.id.notregister);
         signin.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent motionEvent) {
@@ -49,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(motionEvent.getAction()==MotionEvent.ACTION_UP){
                     signin.startAnimation(scaledown);
+                }
+
+                return true;
+            }
+        });
+
+        register.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent motionEvent) {
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    register.startAnimation(scaleup);
+                    Intent intent=new Intent(MainActivity.this,signup.class);
+                    startActivity(intent);
+                }
+                else if(motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    register.startAnimation(scaledown);
                 }
 
                 return true;
