@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">placeable_final</string>
+    <string name="home">Home</string>
+    <string name="sampleprofile">Mayank Kashyap</string>
+    <string name="home_profile_name">David Brewer</string>
+    <string name="home_profile_course">MCA</string>
+    <string name="home_profile_tpocerdit">TPO : 10</string>
+    <string name="home_profile_status">Unplaced</string>
+    <string name="noticeboard">Noticeboard</string>
+    <string name="home_profile_regno">2020CA039</string>
+    <string name="home_profile_link">View Complete Profile</string>
+    <string name="Status">Status</string>
+    <string name="verification_status">Verified</string>
+    <string name="tpocerdit">10</string>
+    <string name="placement_panel">Placement</string>
+    <string name="placement_status">Not Offered</string>
+    <string name="profile_basic_details">Basic Details</string>
+    <string name="profile_phoneno">6306223053</string>
+    <string name="profile_academics_details">Academics Details</string>
+    <string name="example">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+</resources>
