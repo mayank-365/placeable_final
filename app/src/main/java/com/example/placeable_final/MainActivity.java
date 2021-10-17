@@ -65,19 +65,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //action bar code
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.actionbar);
-        View view = getSupportActionBar().getCustomView();
-        ImageButton imageButton = (ImageButton) view.findViewById(R.id.action_bar_back);
-        imageButton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish();
-                    }
-                });
-        //action bar code ends here
     }
 }

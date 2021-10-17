@@ -24,7 +24,8 @@
 
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="665dp">
+        tools:layout_editor_absoluteY="665dp"
+        android:orientation="horizontal">
 
     </LinearLayout>
 
