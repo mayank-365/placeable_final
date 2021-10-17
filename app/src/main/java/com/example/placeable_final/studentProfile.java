@@ -46,7 +46,6 @@ public class studentProfile extends Fragment {
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
                     expandableView.setVisibility(View.GONE);
                 }
-
             }
         });
         return view;
