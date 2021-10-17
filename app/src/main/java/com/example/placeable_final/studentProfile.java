@@ -29,8 +29,6 @@ public class studentProfile extends Fragment {
                              Bundle savedInstanceState) {
             view=inflater.inflate(R.layout.fragment_student_profile, container, false);
 
-//        Button btn2=view.findViewById(R.id.profile_academics_details1);
-//        Button btn3=view.findViewById(R.id.profile_academics_details2);
         View basicDetails=(Button) view.findViewById(R.id.Basic_details);
         expandableView=view.findViewById(R.id.expandabletext);
         cardView=view.findViewById(R.id.profile_cardview);
