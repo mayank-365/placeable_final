@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -25,70 +26,65 @@ public class home extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
-        Button viewprofile;
-        Animation scaleup,scaledown;
+        setContentView(R.layout.activity_main);
 
-            viewprofile=findViewById(R.id.view_complete_profile);
-            scaleup= AnimationUtils.loadAnimation(this,R.anim.scale_up);
-            scaledown= AnimationUtils.loadAnimation(this,R.anim.scale_down);
 
-            viewprofile.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent motionEvent) {
-                    if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
-                        viewprofile.startAnimation(scaleup);
-                        Intent intent=new Intent(home.this,profile.class);
-                        startActivity(intent);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(
+                true
+        );
+        getSupportActionBar().setCustomView(R.layout.actionbar);
+        View view = getSupportActionBar().getCustomView();
+        ImageButton imageButton = (ImageButton) view.findViewById(R.id.action_bar_back);
+        imageButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        finish();
                     }
-                    else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
-                        viewprofile.startAnimation(scaledown);
-                    }
-
-                    return true;
-                }
-            });
-
-            getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); getSupportActionBar().setDisplayShowCustomEnabled(
-                    true
-            );
-            getSupportActionBar().setCustomView(R.layout.actionbar);
-            View view =getSupportActionBar().getCustomView();
-            ImageButton imageButton= (ImageButton)view.findViewById(R.id.action_bar_back);
-            imageButton.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v)
-                        { finish(); } }); ImageButton imageButton2= (ImageButton)view.findViewById(R.id.action_bar_forward); imageButton2.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v)
-                        { Toast.makeText(getApplicationContext(),
+                });
+        ImageButton imageButton2 = (ImageButton) view.findViewById(R.id.action_bar_forward);
+        imageButton2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplicationContext(),
                                 "Forward Button is clicked"
-                                ,Toast.LENGTH_LONG).show(); } });
+                                , Toast.LENGTH_LONG).show();
+                    }
+                });
 
-        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment1,new main_fragment(),"MAIN_FRAGMENT");
+        fragmentTransaction.commit();
 
-
-        /*BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_bar);
-        bottomNavigationView.setSelectedItemId(R.id.home_nav);
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        View back_btn=(ImageButton) view.findViewById(R.id.action_bar_back);
+        back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.company:
-                        startActivity(new Intent(getApplicationContext(), company.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.home_nav:
-                        return true;
-                    case R.id.profile_nav:
-                        startActivity(new Intent(getApplicationContext(), profile.class));
-                        overridePendingTransition(0, 0);
-                        return true;
+            public void onClick(View v) {
+                Fragment f=getActiveFragment();
+                if(f instanceof studentProfile)  {
+                    main_fragment mainFrag = new main_fragment();
+                    FragmentManager fragmentManager1 = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment1, mainFrag,"MAIN_FRAGMENT");
+                    fragmentTransaction.addToBackStack("MAIN_FRAGMENT");
+                    fragmentTransaction.commit();
                 }
-                return false;
-            }
-        });*/
-    }
+                else if(f==null || f instanceof main_fragment)
+                {
+                    finish();
+                }
 
+            }
+        });
+    }
+    public Fragment getActiveFragment() {
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            return null;
+        }
+        String tag = getSupportFragmentManager().getBackStackEntryAt(getSupportFragmentManager().getBackStackEntryCount() - 1).getName();
+        return (Fragment) getSupportFragmentManager().findFragmentByTag(tag);
+    }
+}
