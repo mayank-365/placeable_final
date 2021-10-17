@@ -29,7 +29,7 @@ public class profile extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_layout);
+        setContentView(R.layout.fragment_student_profile);
         expandableView=findViewById(R.id.expandabletext);
         basicDetails=findViewById(R.id.Basic_details);
         cardView=findViewById(R.id.profile_cardview);
