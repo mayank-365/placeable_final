@@ -22,6 +22,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment1,new main_fragment(),"MAIN_FRAGMENT");
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.fragment1, mainFrag,"MAIN_FRAGMENT");
                     fragmentTransaction.addToBackStack("MAIN_FRAGMENT");
                     fragmentTransaction.commit();
+
                 }
                 else if(f==null || f instanceof main_fragment)
                 {
