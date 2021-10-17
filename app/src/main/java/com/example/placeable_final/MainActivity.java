@@ -73,10 +73,11 @@ public class MainActivity extends AppCompatActivity {
                     main_fragment mainFrag = new main_fragment();
                     FragmentManager fragmentManager1 = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment1, mainFrag);
+                    fragmentTransaction.replace(R.id.fragment1, mainFrag,"MAIN_FRAGMENT");
+                    fragmentTransaction.addToBackStack("MAIN_FRAGMENT");
                     fragmentTransaction.commit();
                 }
-                else if(f==null)
+                else if(f==null || f instanceof main_fragment)
                 {
                     finish();
                 }
