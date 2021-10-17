@@ -7,9 +7,13 @@ import android.transition.TransitionManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,6 +25,7 @@ public class profile extends AppCompatActivity {
     ConstraintLayout expandableView,expandable_academics;
     Button basicDetails,academicsdetails;
     CardView cardView,cardView_academics;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +42,9 @@ public class profile extends AppCompatActivity {
                 if(expandableView.getVisibility()==View.GONE){
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
                     expandableView.setVisibility(View.VISIBLE);
+                    expandable_academics.setVisibility(View.GONE);
                 }
                 else{
-
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
                     expandableView.setVisibility(View.GONE);
                 }
@@ -52,14 +57,33 @@ public class profile extends AppCompatActivity {
                 if(expandable_academics.getVisibility()==View.GONE){
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
                     expandable_academics.setVisibility(View.VISIBLE);
+                    expandableView.setVisibility(View.GONE);
                 }
                 else{
-
                     TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
                     expandable_academics.setVisibility(View.GONE);
                 }
 
             }
         });
+        
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.actionbar);
+        View view =getSupportActionBar().getCustomView();
+        ImageButton imageButton= (ImageButton)view.findViewById(R.id.action_bar_back);
+        imageButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    { finish(); } });
+        ImageButton imageButton2= (ImageButton)view.findViewById(R.id.action_bar_forward);
+        imageButton2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    { Toast.makeText(getApplicationContext(),
+                            "Forward Button is clicked"
+                            ,Toast.LENGTH_LONG).show(); } });
     }
 }

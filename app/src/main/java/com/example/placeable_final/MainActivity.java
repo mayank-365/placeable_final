@@ -23,81 +23,33 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
-    //Button viewprofile;
-    //Animation scaleup,scaledown;
-
-    ConstraintLayout expandableView,expandable_academics;
-    Button basicDetails,academicsdetails;
-    CardView cardView,cardView_academics;
+    Button viewprofile;
+    Animation scaleup,scaledown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_layout);
-        expandableView=findViewById(R.id.expandabletext);
-        basicDetails=findViewById(R.id.Basic_details);
-        cardView=findViewById(R.id.profile_cardview);
-        expandable_academics=findViewById(R.id.expandabletext_academics);
-        academicsdetails=findViewById(R.id.profile_academics_details);
-        cardView_academics=findViewById(R.id.profile_academics_cardview);
-        basicDetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(expandableView.getVisibility()==View.GONE){
-                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
-                    expandableView.setVisibility(View.VISIBLE);
-                }
-                else{
-
-                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
-                    expandableView.setVisibility(View.GONE);
-                }
-
-            }
-        });
-        academicsdetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(expandable_academics.getVisibility()==View.GONE){
-                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
-                    expandable_academics.setVisibility(View.VISIBLE);
-                }
-                else{
-
-                    TransitionManager.beginDelayedTransition(cardView,new AutoTransition());
-                    expandable_academics.setVisibility(View.GONE);
-                }
-
-            }
-        });
-    }
-}
-
-
-
-/*
+        setContentView(R.layout.home);
         viewprofile=findViewById(R.id.view_complete_profile);
         scaleup= AnimationUtils.loadAnimation(this,R.anim.scale_up);
         scaledown= AnimationUtils.loadAnimation(this,R.anim.scale_down);
+
         viewprofile.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
                     viewprofile.startAnimation(scaleup);
+                    Intent intent=new Intent(MainActivity.this,profile.class);
+                    startActivity(intent);
                 }
                 else if(motionEvent.getAction()==MotionEvent.ACTION_UP){
                     viewprofile.startAnimation(scaledown);
                 }
+
                 return true;
             }
         });
-        viewprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,profile.class);
-                startActivity(intent);
-            }
-        });
+
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); getSupportActionBar().setDisplayShowCustomEnabled(
                 true
         ); getSupportActionBar().setCustomView(R.layout.actionbar); View view =getSupportActionBar().getCustomView(); ImageButton imageButton= (ImageButton)view.findViewById(R.id.action_bar_back); imageButton.setOnClickListener(
@@ -113,4 +65,4 @@ public class MainActivity extends AppCompatActivity {
                                     ,Toast.LENGTH_LONG).show(); } });
 
     }
-}*/
+}

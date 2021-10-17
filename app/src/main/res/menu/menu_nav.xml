@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
     <item
         android:id="@+id/company"
         android:title="Companies"
         android:icon="@drawable/ic_dashboard"/>
     <item
         android:id="@+id/home_nav"
-        android:title="Home_nav"
+        android:title="Home"
         android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/profile_nav"
