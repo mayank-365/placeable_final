@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "881587399803",
+    "project_id": "placeable-final",
+    "storage_bucket": "placeable-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881587399803:android:3aedc8fd1eb151ec5c46de",
+        "android_client_info": {
+          "package_name": "com.example.placeable_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881587399803-vaccno5g555n94t230ri8041q1aroou7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzkt3mKolEhMv9RY_hASqNVEw62OyY82w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881587399803-vaccno5g555n94t230ri8041q1aroou7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
