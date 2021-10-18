@@ -47,7 +47,7 @@ public class main_fragment extends Fragment {
                     fragmentTransaction.addToBackStack("STUDENT_PROFILE");
                     fragmentTransaction.commit();
                 }
-                else if(motionEvent.getAction()== MotionEvent.ACTION_UP){
+                else if(motionEvent.getAction()== MotionEvent.ACTION_UP) {
                     viewprofile.startAnimation(scaledown);
                 }
                 return true;

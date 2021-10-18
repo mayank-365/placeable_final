@@ -36,4 +36,10 @@
     <string name="register_register">Register</string>
     <string name="register_alreadysignin">Already Registered</string>
     <string name="register_signin">Sign In</string>
+    <string name="foregt_createnew_password">Create New Password</string>
+    <string name="forget_enternew_password">Enter New Password</string>
+    <string name="forget_enter_registrationno">Enter Registration Number</string>
+    <string name="forget_confirm_password">Confirm Passoword</string>
+    <string name="forget_cancel">Cancel</string>
+    <string name="forget_Confirm">Confirm</string>
 </resources>
