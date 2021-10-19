@@ -43,10 +43,13 @@
     <string name="forget_cancel">Cancel</string>
     <string name="forget_Confirm">Confirm</string>
     <string name="register_last_name">Last Name</string>
+    <string name="home_complete_profile">Complete Profile</string>
+    <string name="complete_proflie_text">Click to Complete Profile</string>
     <string name="feedback">Feedback</string>
     <string name="student_feedback_btn">Write Feedback</string>
     <string name="prevFeed">Previous Feedbacks</string>
     <string name="write_feed">Your Feedback</string>
     <string name="Title">Title</string>
     <string name="feeback_des">Description</string>
+
 </resources>

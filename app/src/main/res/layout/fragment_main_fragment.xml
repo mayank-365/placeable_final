@@ -113,7 +113,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/status_panel"
-                        android:layout_marginTop="10dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -197,13 +196,53 @@
                         </androidx.core.widget.NestedScrollView>
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewCompleteprofile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_below="@+id/cardViewProfileSummary"
+                    android:layout_margin="5dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/complete_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/profile_summary">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/dark_orange"
+                            android:textSize="25dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/sf_ui_bold"
+                            android:text="@string/home_complete_profile"
+                            android:textColor="@color/white"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_info"/>
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:textColor="@color/dark_orange"
+                                android:text="@string/complete_proflie_text"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/cardViewStatus"
-                    android:layout_below="@+id/cardViewProfileSummary"
+                    android:layout_below="@+id/cardViewCompleteprofile"
                     android:layout_margin="5dp"
                     app:cardCornerRadius="30dp"
                     android:outlineAmbientShadowColor="@color/black">
@@ -211,7 +250,7 @@
                     android:id="@+id/status_panel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_summary"
+                    android:layout_below="@+id/complete_profile"
                     android:orientation="vertical">
 
                     <TextView
