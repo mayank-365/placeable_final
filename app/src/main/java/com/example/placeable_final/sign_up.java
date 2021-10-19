@@ -31,14 +31,17 @@ import java.util.Objects;
 public class sign_up extends Fragment {
     private EditText First_Name,Last_Name,Reg_No,Phone_No,Email_Id,Password,Confirm_Password ;
     private Button Register,Sign_in,Cancel;
-    private ProgressBar progressBar;
     private FirebaseAuth firebaseAuth;
-    private DatabaseReference databaseReference;
     View view ;
+    ProgressBar progressBar;
+    private DatabaseReference databaseReference;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_sign_up, container, false);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
         firebaseAuth = FirebaseAuth.getInstance();
         First_Name = (EditText) view.findViewById(R.id.signup_First_Name);
         Last_Name = view.findViewById(R.id.signup_Last_Name);
@@ -50,7 +53,6 @@ public class sign_up extends Fragment {
         Register = view.findViewById(R.id.register_request);
         Sign_in = view.findViewById(R.id.register_signin);
         Cancel = view.findViewById(R.id.register_cancel);
-        progressBar = view.findViewById(R.id.progressbar);
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +83,7 @@ public class sign_up extends Fragment {
                     FirebaseUser rUser = firebaseAuth.getCurrentUser();
                     String userId = rUser.getUid();
 
-                    databaseReference = FirebaseDatabase.getInstance().getReference("Student Data");
+                    databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
                     HashMap<String,String> hashMap= new HashMap<>();
                     hashMap.put("userId",userId);
                     hashMap.put("First Name", first_name);
@@ -95,7 +97,7 @@ public class sign_up extends Fragment {
                             if(task.isSuccessful()){
                                 progressBar.setVisibility(view.GONE);
                                 Intent intent = new Intent(getContext(),home.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+                                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }else{
                                 Toast.makeText(getContext(), Objects.requireNonNull(task.getException().getMessage()),Toast.LENGTH_SHORT).show();

@@ -18,6 +18,7 @@
 
     <style name="CustomTheme" parent="Theme.AppCompat.Light">
         <item name="contentInsetStart">0dp</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/dark_orange</item>
         <item name="contentInsetEnd">0dp</item>
         <item name="android:homeAsUpIndicator">@null</item>
     </style>
