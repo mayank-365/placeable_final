@@ -6,7 +6,7 @@
     >
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:src="@drawable/backarrow"
             android:layout_gravity="center_vertical"
@@ -21,7 +21,7 @@
         <TextView
             android:id="@+id/action_bar_text"
             android:layout_width="335dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_weight="1"
             android:fontFamily="@font/sf_ui_bold"
@@ -33,7 +33,7 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:src="@drawable/navfinal"
             android:id="@+id/action_bar_forward"

@@ -40,8 +40,6 @@ public class sign_up extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_sign_up, container, false);
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
         firebaseAuth = FirebaseAuth.getInstance();
         First_Name = (EditText) view.findViewById(R.id.signup_First_Name);
         Last_Name = view.findViewById(R.id.signup_Last_Name);
@@ -82,7 +80,6 @@ public class sign_up extends Fragment {
                 if(task.isSuccessful()){
                     FirebaseUser rUser = firebaseAuth.getCurrentUser();
                     String userId = rUser.getUid();
-
                     databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
                     HashMap<String,String> hashMap= new HashMap<>();
                     hashMap.put("userId",userId);

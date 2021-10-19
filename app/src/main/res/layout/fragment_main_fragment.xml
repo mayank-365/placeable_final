@@ -230,6 +230,7 @@
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_info"/>
                             <Button
+                                android:id="@+id/main_click_completeprofile"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@null"
@@ -246,128 +247,119 @@
                     android:layout_margin="5dp"
                     app:cardCornerRadius="30dp"
                     android:outlineAmbientShadowColor="@color/black">
-                <LinearLayout
-                    android:id="@+id/status_panel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/complete_profile"
-                    android:orientation="vertical">
-
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/status_panel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/dark_orange"
-                        android:fontFamily="@font/sf_ui_bold"
-                        android:gravity="center"
-                        android:text="@string/Status"
-                        android:textColor="@color/white"
-                        android:textSize="25dp" />
+                        android:layout_below="@+id/complete_profile"
+                        android:orientation="vertical">
 
-                    <RelativeLayout
-                        android:id="@+id/status_panel_contents"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/nav_text_color"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <LinearLayout
-                            android:id="@+id/verified_status"
-                            android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="@color/dark_orange"
+                            android:fontFamily="@font/sf_ui_bold"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:text="@string/Status"
+                            android:textColor="@color/white"
+                            android:textSize="25dp" />
 
-                            <TextView
+                        <RelativeLayout
+                            android:id="@+id/status_panel_contents"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/nav_text_color"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/verified_status"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/sf_ui_mediam"
                                 android:gravity="center"
-                                android:text="@string/verification_status"
-                                android:textColor="@color/light_grey"
-                                android:textSize="18dp" />
+                                android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:paddingTop="5dp"
-                                android:src="@drawable/check" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sf_ui_mediam"
+                                    android:gravity="center"
+                                    android:text="@string/verification_status"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="18dp" />
 
-                        </LinearLayout>
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:paddingTop="5dp"
+                                    android:src="@drawable/check" />
 
-                        <LinearLayout
-                            android:id="@+id/tpo_status"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
-                            android:layout_marginRight="35dp"
-                            android:layout_toRightOf="@+id/verified_status"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            </LinearLayout>
 
-                            <TextView
+                            <LinearLayout
+                                android:id="@+id/tpo_status"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/sf_ui_mediam"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginRight="35dp"
+                                android:layout_toRightOf="@+id/verified_status"
                                 android:gravity="center"
-                                android:text="TPO Credits"
-                                android:textColor="@color/light_grey"
-                                android:textSize="18dp" />
+                                android:orientation="vertical">
 
-                            <TextView
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:fontFamily="@font/sf_ui_bold"
-                                android:paddingTop="5dp"
-                                android:text="@string/tpocerdit"
-                                android:textSize="50dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sf_ui_mediam"
+                                    android:gravity="center"
+                                    android:text="TPO Credits"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="18dp" />
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:fontFamily="@font/sf_ui_bold"
+                                    android:paddingTop="5dp"
+                                    android:text="@string/tpocerdit"
+                                    android:textSize="50dp" />
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/tpo_status"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            </LinearLayout>
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/sf_ui_mediam"
+                                android:layout_toRightOf="@+id/tpo_status"
                                 android:gravity="center"
-                                android:text="@string/placement_panel"
-                                android:textColor="@color/light_grey"
-                                android:textSize="18dp" />
+                                android:orientation="vertical">
 
-                            <TextView
-                                android:layout_width="70dp"
-                                android:layout_height="70dp"
-                                android:fontFamily="@font/sf_ui_light"
-                                android:gravity="center"
-                                android:paddingTop="5dp"
-                                android:text="@string/placement_status"
-                                android:textColor="@color/red"
-                                android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sf_ui_mediam"
+                                    android:gravity="center"
+                                    android:text="@string/placement_panel"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="18dp" />
 
-                        </LinearLayout>
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:fontFamily="@font/sf_ui_light"
+                                    android:gravity="center"
+                                    android:paddingTop="5dp"
+                                    android:text="@string/placement_status"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp" />
 
-                    </RelativeLayout>
-                </LinearLayout>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
         </ScrollView>
 
     </androidx.cardview.widget.CardView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom_bar"
-        app:itemBackground="@color/light_orange"
-        app:itemTextColor="@color/dark_orange"
-        app:itemIconTint="@color/dark_orange"
-        app:menu="@menu/menu_nav"
-        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

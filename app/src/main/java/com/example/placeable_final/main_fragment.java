@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 
 public class main_fragment extends Fragment {
-    View view,viewprofile;
+    View view,viewprofile,clicktocompleteprofile;
 
 
     @Override
@@ -31,6 +31,7 @@ public class main_fragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_main_fragment, container, false);
 
         viewprofile = (Button) view.findViewById(R.id.view_complete_profile);
+        clicktocompleteprofile=(Button)view.findViewById(R.id.main_click_completeprofile);
         Animation scaleup,scaledown;
         scaleup= AnimationUtils.loadAnimation(getContext(),R.anim.scale_up);
         scaledown = AnimationUtils.loadAnimation(getContext(),R.anim.scale_down);
@@ -38,20 +39,38 @@ public class main_fragment extends Fragment {
         viewprofile.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent motionEvent) {
-                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     viewprofile.startAnimation(scaleup);
                     studentProfile student = new studentProfile();
                     FragmentManager fragmentManager = getFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment1,new studentProfile(),"STUDENT_PROFILE");
+                    fragmentTransaction.replace(R.id.fragment1, new studentProfile(), "STUDENT_PROFILE");
                     fragmentTransaction.addToBackStack("STUDENT_PROFILE");
                     fragmentTransaction.commit();
-                }
-                else if(motionEvent.getAction()== MotionEvent.ACTION_UP) {
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
                     viewprofile.startAnimation(scaledown);
                 }
                 return true;
             }
+
+            });
+                clicktocompleteprofile.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent motionEvent) {
+                        if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                            clicktocompleteprofile.startAnimation(scaleup);
+                            basic_detail bdetails=new basic_detail();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.fragment1,new basic_detail(),"BASIC_DETAILS");
+                            fragmentTransaction.addToBackStack("BASIC_DETAILS");
+                            fragmentTransaction.commit();
+                        }
+                        else if(motionEvent.getAction()== MotionEvent.ACTION_UP) {
+                            viewprofile.startAnimation(scaledown);
+                        }
+                        return true;
+                    }
         });
         return  view;
 

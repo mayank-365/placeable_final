@@ -51,5 +51,25 @@
     <string name="write_feed">Your Feedback</string>
     <string name="Title">Title</string>
     <string name="feeback_des">Description</string>
-
+    <string name="basicdetails_name">Name</string>
+    <string name="basicdetails_dob">Date of Birth</string>
+    <string name="basicdetails_Gender">Gender</string>
+    <string name="basicdetails_Collageaddress">Collage Email Address</string>
+    <string name="basicdetails_regno">Registration Number</string>
+    <string name="basicdetails_phno">Phone Number</string>
+    <string name="basicdetails_category">Category</string>
+    <string name="basicdetails_pwd">Pwd</string>
+    <string name="basicdetails_course">Course</string>
+    <string name="basicdetails_branch">Branch</string>
+    <string name="basicdetails_gaurdian">Gaurdian</string>
+    <string name="basicdetails_state">State</string>
+    <string name="basicdetails_country">Country</string>
+    <string name="basicdetails_presentaddress">Present Address</string>
+    <string name="basicdetails_permanentaddress">Permanent Address</string>
+    <string name="basicdetails_cancel">Cancel</string>
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
 </resources>
