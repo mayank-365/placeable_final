@@ -83,104 +83,50 @@
 
                     </LinearLayout>
 
-                </LinearLayout>
 
+                </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/notice_board"
+                    android:id="@+id/complete_profile"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/status_panel"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical">
-
+                    android:layout_below="@id/profile_summary"
+                    android:orientation="vertical"
+                    android:gravity="center">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/dark_orange"
+                        android:textColor="@color/white"
                         android:fontFamily="@font/sf_ui_bold"
                         android:gravity="center"
-                        android:text="@string/noticeboard"
-                        android:textColor="@color/white"
-                        android:textSize="25dp" />
-
-                    <androidx.core.widget.NestedScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="350dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/nav_text_color"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Csk won the ipl 2021 with a one sided match against kkr duplessis gives the duplex to the team"
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
-                                android:textSize="18dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/sf_ui_semibold"
-                                android:text="Csk won the ipl 2021 with a one sided match against kkr duplessis gives the duplex to the team"
-                                android:textSize="18dp" />
-
-
-                        </LinearLayout>
-                    </androidx.core.widget.NestedScrollView>
-
+                        android:textSize="25sp"
+                        android:text="@string/home_complete_profile"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_info"
+                        />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/complete_profile_button"
+                            android:background="@null"
+                            android:text="@string/complete_proflie_text"
+                            android:textColor="@color/dark_orange"
+                            />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/status_panel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/profile_summary"
+                    android:layout_below="@+id/complete_profile"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
@@ -193,6 +139,7 @@
                         android:text="@string/Status"
                         android:textColor="@color/white"
                         android:textSize="25dp" />
+
 
                     <RelativeLayout
                         android:id="@+id/status_panel_contents"
@@ -285,6 +232,99 @@
                         </LinearLayout>
 
                     </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/notice_board"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/status_panel"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/dark_orange"
+                            android:fontFamily="@font/sf_ui_bold"
+                            android:gravity="center"
+                            android:text="@string/noticeboard"
+                            android:textColor="@color/white"
+                            android:textSize="25dp" />
+
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/nav_text_color"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Csk won the ipl 2021 with a one sided match against kkr duplessis gives the duplex to the team"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/sf_ui_semibold"
+                                    android:text="Csk won the ipl 2021 with a one sided match against kkr duplessis gives the duplex to the team"
+                                    android:textSize="18dp" />
+
+
+                            </LinearLayout>
+                        </androidx.core.widget.NestedScrollView>
+
+                    </LinearLayout>
+
+
                 </LinearLayout>
             </RelativeLayout>
 
