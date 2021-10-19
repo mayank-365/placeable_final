@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
+
         //animation button
         scaleup= AnimationUtils.loadAnimation(MainActivity.this,R.anim.scale_up);
         scaledown = AnimationUtils.loadAnimation(MainActivity.this,R.anim.scale_down);
