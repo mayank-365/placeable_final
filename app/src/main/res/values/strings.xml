@@ -43,4 +43,6 @@
     <string name="forget_cancel">Cancel</string>
     <string name="forget_Confirm">Confirm</string>
     <string name="register_last_name">Last Name</string>
+    <string name="home_complete_profile">Complete Profile</string>
+    <string name="complete_proflie_text">Click to Complete Profile</string>
 </resources>
