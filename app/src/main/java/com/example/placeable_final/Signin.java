@@ -1,5 +1,6 @@
 package com.example.placeable_final;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 public class Signin extends Fragment {
     View view,signin,forget,register;
@@ -34,6 +36,7 @@ public class Signin extends Fragment {
             @Override
             public boolean onTouch(View v, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+
                     signin.startAnimation(scaleup);
                     Intent intent = new Intent(getContext(),home.class);
                     startActivity(intent);
@@ -92,4 +95,5 @@ public class Signin extends Fragment {
         //button code end
         return view;
     }
+
 }
