@@ -83,7 +83,7 @@ public class sign_up extends Fragment {
                     FirebaseUser rUser = firebaseAuth.getCurrentUser();
                     String userId = rUser.getUid();
 
-                    databaseReference = FirebaseDatabase.getInstance().getReference("Student Data");
+                    databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
                     HashMap<String,String> hashMap= new HashMap<>();
                     hashMap.put("userId",userId);
                     hashMap.put("First Name", first_name);
@@ -97,7 +97,7 @@ public class sign_up extends Fragment {
                             if(task.isSuccessful()){
                                 progressBar.setVisibility(view.GONE);
                                 Intent intent = new Intent(getContext(),home.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+                                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }else{
                                 Toast.makeText(getContext(), Objects.requireNonNull(task.getException().getMessage()),Toast.LENGTH_SHORT).show();
