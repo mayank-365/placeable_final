@@ -192,6 +192,7 @@
                     android:layout_marginRight="100dp"
                     />
                 <Button
+                    android:id="@+id/academics_nextbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button"

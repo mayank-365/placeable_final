@@ -81,8 +81,17 @@
     <string name="academics_universityname">University Name</string>
     <string name="academics_graddegree">Degree</string>
     <string name="academics_cancel">Cancel</string>
-    <string name="academics_next">Percentage</string>
+    <string name="academics_next">Next</string>
     <string name="basicdetails_next">Next</string>
+    <string name="additional_uploadphototext"><u>Upload Photo</u></string>
+    <string name="additonal_Location_image">Location</string>
+    <string name="additional_addphoto">Add Photo</string>
+    <string name="additonal_Location_resume">Location</string>
+    <string name="additional_uploadresumetext"><u>Upload Resume</u></string>
+    <string name="additional_addproject"><u>Add Project</u></string>
+    <string name="additonal_projecttitle">Title</string>
+    <string name="additional_next">Save</string>
+    <string name="additional_cancel">Cancel</string>
     <string-array name="Gender">
         <item>Male</item>
         <item>Female</item>
