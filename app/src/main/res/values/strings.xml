@@ -67,6 +67,22 @@
     <string name="basicdetails_presentaddress">Present Address</string>
     <string name="basicdetails_permanentaddress">Permanent Address</string>
     <string name="basicdetails_cancel">Cancel</string>
+    <string name="academics_highschooldetails"><u>High School Details</u></string>
+    <string name="academics_highschoolname">High School Name</string>
+    <string name="academics_highschoolboard">Board</string>
+    <string name="academics_10thyear">Year</string>
+    <string name="academics_10thyear_percentage">Percentage</string>
+    <string name="academics_interschooldetails"><u>Intermediate</u></string>
+    <string name="academics_interschoolname">Intermediate</string>
+    <string name="academics_interschoolboard">Board</string>
+    <string name="academics_12thyear">Year</string>
+    <string name="academics_gradchooldetails"><u>Graduation Details</u></string>
+    <string name="academics_collage">Collage Name</string>
+    <string name="academics_universityname">University Name</string>
+    <string name="academics_graddegree">Degree</string>
+    <string name="academics_cancel">Cancel</string>
+    <string name="academics_next">Percentage</string>
+    <string name="basicdetails_next">Next</string>
     <string-array name="Gender">
         <item>Male</item>
         <item>Female</item>
