@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/drawable/roundcorners.xml" value="0.7285714285714285" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/actionbar.xml" value="0.25" />
-        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/content_main.xml" value="0.22" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/dropdown_gender.xml" value="0.22" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/fragment_acadmeics_details.xml" value="0.25" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/fragment_additional_details.xml" value="0.22" />
@@ -19,7 +21,10 @@
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/fragment_student_feedback.xml" value="0.25" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/fragment_student_write_feedback.xml" value="0.2" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/main_activity.xml" value="0.1" />
+        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
         <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/layout/roundconers.xml" value="0.2" />
+        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/menu/activity_main_drawer.xml" value="0.18" />
+        <entry key="..\:/Users/Mayank/Desktop/placeable_final/app/src/main/res/menu/menu_nav.xml" value="0.2" />
       </map>
     </option>
   </component>
