@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".studentRequest">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:id="@+id/prev_feedbacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_orange"
+                        android:fontFamily="@font/sf_ui_bold"
+                        android:gravity="center"
+                        android:text="Current Requests"
+                        android:textColor="@color/white"
+                        android:textSize="25dp" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="350dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:background="@color/nav_text_color"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Csk won the ipl 2021 with a one sided match against kkr duplessis gives the duplex to the team"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Accused Nihang Sarabjit Singh has been detained after the brutal lynching of a Dalit man at a farmers’ protest site in Kundli near the Delhi-Haryana Singhu border by a group of Nihang Sikhs, sources told News18."
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/sf_ui_semibold"
+                                android:text="Csk won the ipl 2021 with a one sided match against kkr duplessis gives the duplex to the team"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="30dp">
+                <LinearLayout
+                    android:id="@+id/complete_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/dark_orange"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/sf_ui_bold"
+                        android:text="@string/home_complete_profile"
+                        android:textColor="@color/white"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_info"/>
+                        <Button
+                            android:id="@+id/main_click_completeprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textColor="@color/dark_orange"
+                            android:text="@string/complete_proflie_text"/>6
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
