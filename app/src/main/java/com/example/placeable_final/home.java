@@ -26,7 +26,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class home extends AppCompatActivity {
-    @Override
+    BottomNavigationView bottomNavigationView;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -70,14 +70,53 @@ public class home extends AppCompatActivity {
                     FragmentManager fragmentManager1 = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
                     fragmentTransaction.replace(R.id.fragment1, mainFrag,"MAIN_FRAGMENT");
-                    fragmentTransaction.addToBackStack("MAIN_FRAGMENT");
                     fragmentTransaction.commit();
                 }
                 else if(f==null || f instanceof main_fragment)
                 {
                     finish();
                 }
+                else if(f instanceof acadmeics_details){
+                    FragmentManager fragmentManager1 = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment1, new basic_detail(),"BASIC_DETAILS");
+                    fragmentTransaction.commit();
+                }
+                else if(f instanceof additional_details){
+                    FragmentManager fragmentManager1 = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment1, new acadmeics_details(),"ACADEMIC DETAILS");
+                    fragmentTransaction.commit();
+                }
+                else if(f instanceof basic_detail){
+                    FragmentManager fragmentManager1 = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager1.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment1, new main_fragment(),"HOME");
+                    fragmentTransaction.commit();
+                }
 
+            }
+        });
+        bottomNavigationView = findViewById(R.id.bottom_bar);
+        bottomNavigationView.setSelectedItemId(R.id.home_nav);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home_nav:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment1, new main_fragment()).commit();
+                        return true;
+
+                    case R.id.company:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment1, new company()).commit();
+                        return true;
+
+                    case R.id.profile_nav:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment1, new studentProfile()).commit();
+                        return true;
+                }
+                return false;
             }
         });
     }

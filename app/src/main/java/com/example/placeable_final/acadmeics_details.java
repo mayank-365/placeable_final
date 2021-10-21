@@ -36,8 +36,10 @@ public class acadmeics_details extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getContext(),basic_detail.class);
-                startActivity(intent);
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment1,new main_fragment(),"MAIN_FRAGMENT");
+                fragmentTransaction.commit();
             }
         });
         return view;

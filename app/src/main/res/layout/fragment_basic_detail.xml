@@ -1,180 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".basic_detail"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp">
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:cardCornerRadius="20dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
+    tools:context=".additional_details">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp"
-            >
-        <EditText
-            android:id="@+id/basic_details_name"
-            android:layout_width="350dp"
-            android:hint="@string/basicdetails_name"
-            android:layout_height="wrap_content"
-            android:background="@drawable/input"
+            app:cardCornerRadius="20dp">
 
-            />
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-                <!--start here!-->
-                <Spinner android:id="@+id/Gender_dropdown"
-                    android:layout_width="170dp"
-                    android:background="@drawable/input"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/basic_details_name"
+                    android:layout_width="350dp"
+                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_name"
+
                     />
-                <EditText
-                    android:id="@+id/Basic_details_dob"
-                    android:layout_height="wrap_content"
-                    android:layout_width="170dp"
-                    android:clickable="false"
-                    android:cursorVisible="false"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/input"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:hint="@string/basicdetails_dob"/>
-            </LinearLayout>
-            <EditText
-                android:id="@+id/basic_details_collageemail"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input"
-                android:hint="@string/basicdetails_Collageaddress"
-                android:layout_marginTop="10dp"/>
-            <EditText
-                android:id="@+id/basic_details_regno"
-                android:layout_width="350dp"
-                android:hint="@string/basicdetails_regno"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"
-                />
-            <EditText
-                android:id="@+id/basic_details_phno"
-                android:layout_width="350dp"
-                android:hint="@string/basicdetails_phno"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"
-                />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-                <EditText
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/input"
-                    android:hint="@string/basicdetails_category"
-                    android:layout_marginRight="10dp"/>
-                <EditText
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/basicdetails_pwd"
-                    android:background="@drawable/input"/>
-            </LinearLayout>
-            <EditText
-                android:id="@+id/basic_details_course"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"
-                android:hint="@string/basicdetails_course"/>
-            <EditText
-                android:id="@+id/basic_details_branch"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/basicdetails_branch"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"/>
 
-            <EditText
-                android:id="@+id/basic_details_gaurdian"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/basicdetails_gaurdian"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"
-                />
-
-            <EditText
-                android:id="@+id/basic_details_permanentaddress"
-                android:hint="@string/basicdetails_permanentaddress"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"
-                />
-
-            <EditText
-                android:id="@+id/basic_details_presentaddress"
-                android:hint="@string/basicdetails_presentaddress"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/input"
-                android:layout_marginTop="10dp"
-                />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-                <EditText
-                    android:id="@+id/basic_details_state"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/input"
-                    android:hint="@string/basicdetails_state"
-                    android:layout_marginRight="10dp"/>
-
-                <EditText
-                    android:id="@+id/basic_details_country"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/input"
-                    android:hint="@string/basicdetails_country"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="center"
-                >
-                <Button
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button"
-                    android:text="@string/basicdetails_cancel"
-                    android:fontFamily="@font/sf_ui_bold"
-                    android:textColor="@color/white"
-                    android:layout_marginRight="100dp"
-                    />
-                <Button
-                    android:id="@+id/basic_details_next"
+                    android:layout_marginTop="10dp">
+                    <!--start here!-->
+                    <Spinner
+                        android:id="@+id/Gender_dropdown"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input" />
+
+                    <EditText
+                        android:id="@+id/Basic_details_dob"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/input"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/basicdetails_dob" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/basic_details_collageemail"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_Collageaddress" />
+
+                <EditText
+                    android:id="@+id/basic_details_regno"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_regno" />
+
+                <EditText
+                    android:id="@+id/basic_details_phno"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_phno" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button"
-                    android:text="@string/basicdetails_next"
-                    android:fontFamily="@font/sf_ui_bold"
-                    android:textColor="@color/white"
-                    />
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/basicdetails_category" />
+
+                    <EditText
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input"
+                        android:hint="@string/basicdetails_pwd" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/basic_details_course"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_course" />
+
+                <EditText
+                    android:id="@+id/basic_details_branch"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_branch" />
+
+                <EditText
+                    android:id="@+id/basic_details_gaurdian"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_gaurdian" />
+
+                <EditText
+                    android:id="@+id/basic_details_permanentaddress"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_permanentaddress" />
+
+                <EditText
+                    android:id="@+id/basic_details_presentaddress"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/basicdetails_presentaddress" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/basic_details_state"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/input"
+                        android:hint="@string/basicdetails_state" />
+
+                    <EditText
+                        android:id="@+id/basic_details_country"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input"
+                        android:hint="@string/basicdetails_country" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="100dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/sf_ui_bold"
+                        android:text="@string/basicdetails_cancel"
+                        android:id="@+id/basic_cancel"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/basic_details_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/sf_ui_bold"
+                        android:text="@string/basicdetails_next"
+                        android:textColor="@color/white" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-</ScrollView>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</FrameLayout>

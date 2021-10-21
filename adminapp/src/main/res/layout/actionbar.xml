@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/backarrow"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:id="@+id/action_bar_back"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/action_bar_text"
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_ui_bold"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/home"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/navfinal"
+            android:id="@+id/action_bar_forward"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"/>
+
+
+</LinearLayout>

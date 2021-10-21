@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "placeable_final"
 include ':app'
+include ':adminapp'
