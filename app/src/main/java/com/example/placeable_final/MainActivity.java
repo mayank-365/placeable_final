@@ -61,13 +61,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //signin fun on touch
+
+        //animation code end
+
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.main_activity_frame,new Signin(),"Signin");
         fragmentTransaction.commit();
-
     }
-
 
     public Fragment getActiveFragment() {
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
@@ -77,3 +80,4 @@ public class MainActivity extends AppCompatActivity {
         return (Fragment) getSupportFragmentManager().findFragmentByTag(tag);
     }
 }
+
